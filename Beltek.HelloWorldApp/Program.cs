@@ -30,16 +30,16 @@
             //Console.WriteLine("Welcome {0} {1}", name, surname);
             //Console.WriteLine($"Welcome {name} {surname}");
 
-            string name, surname;
-            byte age;
-            Console.Write("Hoşgeldiniz Lütfen Adınızı giriniz : ");
-            name = Console.ReadLine();
-            Console.Write("Lütfen Soyadınızı giriniz : ");
-            surname = Console.ReadLine();
-            Console.Write("Lütfen yaşınızı giriniz : ");
-            age = byte.Parse(Console.ReadLine());
+            //string name, surname;
+            //byte age;
+            //Console.Write("Hoşgeldiniz Lütfen Adınızı giriniz : ");
+            //name = Console.ReadLine();
+            //Console.Write("Lütfen Soyadınızı giriniz : ");
+            //surname = Console.ReadLine();
+            //Console.Write("Lütfen yaşınızı giriniz : ");
+            //age = byte.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Adınız :{name} Soyadınız :{surname} Yaşınız :{age} Verdiğiniz bilgiler için teşekkürler.");
+            //Console.WriteLine($"Adınız :{name} Soyadınız :{surname} Yaşınız :{age} Verdiğiniz bilgiler için teşekkürler.");
 
             #region Kontrollü tür dönüşümü
             //checked
