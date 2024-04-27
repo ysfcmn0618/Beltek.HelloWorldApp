@@ -1,11 +1,19 @@
-﻿namespace Beltek.HelloWorldApp
+﻿using System;
+
+namespace Beltek.HelloWorldApp
 {
+    //ctrl + k d kodları düenler
+    //ctrl +k c comment satırı ekleme
+    //ctrl + k u uncomment 
+    //ctrl + . namespace using eklemek için açılır menü 
+    //ctrl + k s region gibi kod bloklarını oluşturabileceğimiz menü açılır.
     internal class Program
     {
         static int stat = 10;
 
         static void Main(string[] args)
         {
+            #region 1. Hafta
             #region Değişkenler
             ////Console.WriteLine("Hello, World!");//ctrl+k+s #region codu bölmelere ayırır region ile açıklama yapabiliriz.
             //Console.WriteLine("Lütfen Adınızı Giriniz :");
@@ -47,7 +55,7 @@
             //    int sayi = 257;
             //    byte number = (byte)sayi;//ctrl+k+s seçilen kod bloğunu küme parantezleri içerisine alır.
             //    Console.WriteLine(number);
-            //}  
+            //}
             #endregion
 
             #region Convert to tür dönüşümü 
@@ -63,17 +71,27 @@
             //String değeri byte türüne dönüştüreceğimiz zaman kullanılır parsın uzmanlık alanı stringi byte dönüştürmektir.
             //string sayi = "24";
             //byte _number = byte.Parse(sayi);
-            #endregion
+
+            //Console.Write("Adınızı Giriniz :");
+            //string name =Console.ReadLine();
+            //Console.Write("Soyadınızı Giriniz :");
+            //string surname =Console.ReadLine();
+            //Console.Write("Yaşınızı Giriniz :");
+            //byte age = byte.Parse(Console.ReadLine());
+
+            //Console.WriteLine($"Hoşgeldin Canım {name} {surname} neden geciktin {age} yıl beklemeye ne gerek vardı.!!!");
 
             #endregion
 
+            #endregion
 
 
+            #endregion
 
+
+            Console.WriteLine("Merhaba !!");
             Console.ReadKey();
-
-
-
         }
     }
 }
+//proje içerisinde genel tanımlamaları otomatik kullanmayı kaldırmak için proje üzerinde sağ tık/özellikler /global using /implisint global using kaldırdığımız da geçerli proje içerisinde System gibi temel namespacelerin otomatik tanımlamasını kaldırır. ve manuel olarak eklenmesi gerekir.
