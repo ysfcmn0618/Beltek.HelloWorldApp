@@ -9,7 +9,7 @@ namespace Beltek.HelloWorldApp
     //ctrl + k s region gibi kod bloklarını oluşturabileceğimiz menü açılır.
     internal class Program
     {
-        static int stat = 10;
+
 
         static void Main(string[] args)
         {
@@ -73,13 +73,13 @@ namespace Beltek.HelloWorldApp
             //byte _number = byte.Parse(sayi);
 
             //Console.Write("Adınızı Giriniz :");
-            //string name =Console.ReadLine();
+            //string name = Console.ReadLine();
             //Console.Write("Soyadınızı Giriniz :");
-            //string surname =Console.ReadLine();
+            //string surname = Console.ReadLine();
             //Console.Write("Yaşınızı Giriniz :");
             //byte age = byte.Parse(Console.ReadLine());
 
-            //Console.WriteLine($"Hoşgeldin Canım {name} {surname} neden geciktin {age} yıl beklemeye ne gerek vardı.!!!");
+            //Console.WriteLine($"Hoşgeldin Canım {name} {surname} neden geciktin?!!\n {age} yıl beklemeye ne gerek vardı.!!!");
 
             #endregion
 
@@ -88,6 +88,35 @@ namespace Beltek.HelloWorldApp
 
             #endregion
 
+            #region 2. Hafta
+            // try catch blokların da hata önetimi uglanır oluşan her hata için bit catch bloğu oluşturulur ve yakalanan hata türünü göre hata yönetimi uygulanır.uygulanması gerekir.
+            try
+            {
+                Console.Write("Adınızı Giriniz :");
+                string name = Console.ReadLine();
+                Console.Write("Soyadınızı Giriniz :");
+                string surname = Console.ReadLine();
+                Console.Write("Yaşınızı Giriniz :");
+                byte age = byte.Parse(Console.ReadLine());
+
+                Console.WriteLine($"Hoşgeldin Canım {name} {surname} neden geciktin?!!\n {age} yıl beklemeye ne gerek vardı.!!!");
+
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("0-255 arası bir değer giriniz!!!");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Yaşınızı sayı olarak giriniz lütfen!!!");
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Bilinmeyem Bir Hata Oluştu!!!!");
+            }
+
+            #endregion
 
             Console.WriteLine("Merhaba !!");
             Console.ReadKey();
@@ -95,3 +124,4 @@ namespace Beltek.HelloWorldApp
     }
 }
 //proje içerisinde genel tanımlamaları otomatik kullanmayı kaldırmak için proje üzerinde sağ tık/özellikler /global using /implisint global using kaldırdığımız da geçerli proje içerisinde System gibi temel namespacelerin otomatik tanımlamasını kaldırır. ve manuel olarak eklenmesi gerekir.
+//intellisense 
