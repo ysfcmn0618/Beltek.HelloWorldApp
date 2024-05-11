@@ -107,28 +107,67 @@
             //}
 
 
-            int max = int.MinValue, ciftToplam = 0;
-            for (; ; )//Sonsuz döngü
-            {
-                Console.WriteLine("Sayı giriniz :");
-                int sayi = int.Parse(Console.ReadLine());
-                if (sayi > max)
-                {
-                    max = sayi;                    
-                }
-                if (sayi % 2 == 0)
-                {
-                    ciftToplam += sayi;
-                }
-                Console.WriteLine("Devam etmek istiyormusnuz? (e-h)");
-                char devam = char.Parse(Console.ReadLine().ToLower());
-                if (devam == 'h')
-                {
-                    Console.WriteLine($"Girilen en büyük sayı {max} \nGirilen Çift sayıların Toplamı : {ciftToplam}");
-                    break;//Gerekli şartlar sağlanınca sonsuz döngünün kırıldığı nokta
-                }
-            }
+            //int max = int.MinValue, ciftToplam = 0;
+            //for (; ; )//Sonsuz döngü
+            //{
+            //    Console.WriteLine("Sayı giriniz :");
+            //    int sayi = int.Parse(Console.ReadLine());
+            //    if (sayi > max)
+            //    {
+            //        max = sayi;                    
+            //    }
+            //    if (sayi % 2 == 0)
+            //    {
+            //        ciftToplam += sayi;
+            //    }
+            //    Console.WriteLine("Devam etmek istiyormusnuz? (e-h)");
+            //    char devam = char.Parse(Console.ReadLine().ToLower());
+            //    if (devam == 'h')
+            //    {
+            //        Console.WriteLine($"Girilen en büyük sayı {max} \nGirilen Çift sayıların Toplamı : {ciftToplam}");
+            //        break;//Gerekli şartlar sağlanınca sonsuz döngünün kırıldığı nokta
+            //    }
+            //}
 
+            //while (true)
+            //{
+
+            //}
+
+            //var rnd = new Random();
+            //int num = rnd.Next(100);
+
+            //byte hak = 0;
+            //while (hak < 3)
+            //{
+            //    Console.Write("0-100 arası bir sayı giriniz :");
+            //    int val = int.Parse(Console.ReadLine());
+            //    if (val == num)
+            //    {
+            //        Console.WriteLine("Bildiniz.");
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Bilemediniz!!!");
+            //        hak++;
+            //    }
+
+            //}
+
+            bool devam = false;
+            int val, toplam = 0;
+            char cevap;
+            do
+            {
+                Console.Write("Bir sayı giriniz :");
+                val = int.Parse(Console.ReadLine());
+                toplam += val;
+                Console.Write("Devam etmek istiyormusnuz (yes/no - y/n):");
+                cevap = char.Parse(Console.ReadLine());
+                if (cevap == 'y') { devam = true; }
+            } while (devam);
+            Console.WriteLine($"Girilen sayıların toplamı : {toplam}");
             Console.ReadKey();
 
         }
