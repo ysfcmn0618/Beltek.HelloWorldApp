@@ -6,7 +6,7 @@ namespace Beltek.MethodlarApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Yapmak istediğiniz işlemi giriniz ( + - * / 2)");
+            Console.WriteLine("Aşağıdaki parametreler ile yapmak istediğiniz işlemi belirtiniz.\n '+' Toplama işlemi için \n '-' çıkarma  \n'*' çarpma \n '/' Bölme işlemi \n '2' Üst değer hesabı \n 'A' Asal Durum");
             string islem = Console.ReadLine();
             double var1 = SayiAl(islem);
             double var2 = SayiAl(islem);
@@ -50,6 +50,11 @@ namespace Beltek.MethodlarApp
                 case "2":
                     Console.WriteLine($"Sonuç = {UsluSayi(var1, var2)}");
                     break;
+                case "A":
+                    Console.WriteLine($"Sonuç 1. sayı için = {AsalMi(var1)}");
+                    Console.WriteLine($"Sonuç 2. sayı için = {AsalMi(var2)}");
+                    break;
+
             }
         }
         /// <summary>
@@ -118,7 +123,7 @@ namespace Beltek.MethodlarApp
             return double.Parse(Console.ReadLine());
         }
 
-        static bool AsalSayiBul(int sayi)
+        static bool AsalMi(double sayi)
         {
             int kontrol = 0;
             //bool sonuc;
@@ -142,4 +147,4 @@ namespace Beltek.MethodlarApp
 
 //Method Signature - Method imzası : Method parametrelerinin sayıları ve veri tipleri,method imzasını oluşturur.
 /// 3 slash yan yana methodun üstüne eklendiğinde methoda özet açıklama yazmak için kullanılır . ve kullanılmalı yazılan methodun nasıl kullanılacağına dair bilgi girilmeli.
-// methot overloading aynı isimde birden fazla method tanımlanması methotdun işlevselliğini arttırmak için kullanılabilir
+// methot overloading aynı isimde birden fazla method tanımlanması methotdun işlevselliğini arttırmak için kullanılır
